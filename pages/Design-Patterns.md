@@ -203,7 +203,7 @@ usable throughout your application. Controllers handle the request, process the 
 views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the
 web browser.
 
-MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/nguyentranchung/php-the-right-way/wiki/Frameworks).
 
 Learn more about MVC and its relatives:
 

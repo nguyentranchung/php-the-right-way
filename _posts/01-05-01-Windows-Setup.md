@@ -3,25 +3,17 @@ isChild: true
 anchor:  windows_setup
 ---
 
-## Windows Setup {#windows_setup_title}
+## Thiết lập trên Windows {#windows_setup_title}
 
-You can download the binaries from [windows.php.net/download][php-downloads]. After the extraction of PHP, it is recommended to set the [PATH][windows-path] to the root of your PHP folder (where php.exe is located) so you can execute PHP from anywhere.
+Bạn có thể tải xuống file cài đặt từ [windows.php.net/download][php-downloads]. Sau khi giải nén PHP, bạn nên thiết lập [PATH][windows-path] đến thư mục gốc của thư mục PHP (nơi chứa file php.exe) của bạn để bạn có thể thực thi PHP từ bất cứ đâu.
 
-For learning and local development, you can use the built in webserver with PHP 5.4+ so you don't need to worry about
-configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
-help get a Windows development environment up and running fast. That said, these tools will be a little different from
-production so be careful of environment differences if you are working on Windows and deploying to Linux.
+Đối với học tập và dev local, bạn có thể dùng webserver cung cấp sẵn từ PHP 5.4+ và không cần lo lắng về việc cấu hình. Bạn cũng có thể cài đặt các gói "all-in-one" có đầy đủ webserver và MySQL như là [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] và [WAMP][wamp] sẽ giúp có được môi trường phát triển Windows và chạy một cách nhanh chóng. Điều đó nói rằng, những công cụ này sẽ khác một chút so với sản xuất, vì vậy hãy cẩn thận về sự khác biệt về môi trường nếu bạn đang làm việc trên Windows và triển khai lên Linux.
 
-If you need to run your production system on Windows, then IIS7 will give you the most stable and best performance. You
-can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with
-FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
-there is a [dedicated area on iis.net][php-iis] for PHP.
+Nếu bạn cần chạy production system của mình trên Windows, thì IIS7 sẽ cung cấp cho bạn hiệu suất ổn định và tốt nhất. Bạn có thể dùng [phpmanager][phpmanager] (một loại GUI plugin cho IIS7) để cấu hình và quản lý PHP một cách đơn giản. IIS7 đi kèm với FastCGI được tích hợp sẵn và sẵn sàng để đi, bạn chỉ cần cấu hình PHP như một trình xử lý (handler). Để được hỗ trợ và có thêm nguồn lực bổ sung, có một [khu vực dành riêng trên iis.net][php-iis] cho PHP.
 
-Generally running your application on different environment in development and production can lead to strange bugs popping up when you go
-live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a [Virtual Machine](/#virtualization_title).
+Nói chung chạy ứng dụng của bạn trên môi trường khác nhau trong phát triển và sản xuất có thể dẫn đến các lỗi lạ xuất hiện khi bạn live. Nếu bạn đang phát triển trên Windows và triển khai lên Linux (hoặc bất kỳ thứ gì không phải Windows) thì bạn nên cân nhắc sử dụng một [Máy ảo](#virtualization_title).
 
-Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
+Chris Tankersley có một bài đăng trên blog rất hữu ích về những công cụ mà anh ta sử dụng để [phát triển PHP bằng Windows][windows-tools].
 
 [easyphp]: http://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/

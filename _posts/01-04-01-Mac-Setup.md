@@ -3,61 +3,53 @@ isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## Thiết lập trên Mac {#mac_setup_title}
 
-macOS comes prepackaged with PHP but it is normally a little behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
+macOS được đóng gói sẵn với PHP nhưng nó thường là chậm hơn một chút so với bản phát hành ổn định mới nhất. Có nhiều cách để cài đặt phiên bản PHP mới nhất trên macOS.
 
-### Install PHP via Homebrew
+### Cài đặt PHP thông qua Homebrew
 
-[Homebrew] is a package manager for macOS that helps you easily install PHP and various extensions. The Homebrew core repository provides "formulae" for PHP 5.6, 7.0, 7.1, and 7.2. Install the latest version with this command:
+[Homebrew] là một công cụ quản lý gói mạnh mẽ cho macOS, sẽ giúp bạn cài đặt PHP và các phần mở rộng dễ dàng. Homebrew core repository cung cấp "formulae" cho PHP 5.6, 7.0, 7.1, và 7.2. Cài đặt phiên bản mới nhất với câu lệnh:
 
 ```
 brew install php@7.2
 ```
 
-You can switch between Homebrew PHP versions by modifying your `PATH` variable. Alternatively, you can use [brew-php-switcher][brew-php-switcher] to switch PHP versions automatically.
+Bạn có thể chuyển đổi qua lại phiên bản Homebrew PHP bằng cách thay đổi biến `PATH`. Cách khác, bạn có thể dùng [brew-php-switcher][brew-php-switcher] để chuyển đồi phiên bản PHP một cách tự động.
 
-### Install PHP via Macports
+### Cài đặt PHP thông qua Macports
 
-The [MacPorts] Project is an open-source community initiative to design an
-easy-to-use system for compiling, installing, and upgrading either
-command-line, X11 or Aqua based open-source software on the OS X operating
-system.
+[MacPorts] Project là một dự án mã nguồn mở để thiết kế một hệ thống dễ sử dụng cho biên dịch, cài đặt và nâng cấp ngay cả trên command-line, X11 hay Aqua dựa vào các phần mềm mã nguồn mở trên OS X.
 
-MacPorts supports pre-compiled binaries, so you don't need to recompile every
-dependency from the source tarball files, it saves your life if you don't
-have any package installed on your system.
+MacPorts hỗ trợ các tệp nhị phân được biên dịch trước, vì vậy bạn không cần phải biên dịch lại mọi phụ thuộc từ tệp tarball nguồn, tiết kiệm thời gian của bạn nếu bạn không có bất kỳ gói nào được cài đặt trên hệ thống của mình.
 
-At this point, you can install `php54`, `php55`, `php56`, `php70` or `php71` using the `port install` command, for example:
+Tại thời điểm này, bạn có thể cài `php54`, `php55`, `php56`, `php70` or `php71` sử dụng `port install` command, ví dụ nhé:
 
     sudo port install php56
     sudo port install php71
 
-And you can run `select` command to switch your active PHP:
+Và bạn có thể chạy `select` command để kích hoạt phiên bản PHP mong muốn:
 
     sudo port select --set php php71
 
-### Install PHP via phpbrew
+### Cài đặt PHP thông qua phpbrew
 
-[phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
-applications/projects require different versions of PHP, and you are not using virtual machines.
+[phpbrew] là công cụ có thể cài đặt và quản lý nhiều phiên bản PHP khác nhau, rất hữu ích nếu bạn có hai ứng dụng/project chạy trên hai phiên bản PHP khác nhau và bạn không sử dụng máy ảo.
 
-### Install PHP via Liip's binary installer
+### Cài đặt PHP thông qua Liip's binary installer
 
-Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.3.
-It doesn't overwrite the PHP binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+Một sự lựa chọn phổ biến khác là [php-osx.liip.ch], nó cung cấp một phương thức cài đặt cho PHP phiên bản 5.3 đến 7.3.
+Nó không ghi đè lên phiên bản PHP mà Apple đã cài, mà cài đặt trên một thư mục khác (/usr/local/php5).
 
-### Compile from Source
+### Biên dịch từ Source
 
-Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
-In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
-["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
+Một tùy chọn khác cung cấp cho bạn quyền kiểm soát phiên bản PHP bạn cài đặt, đó là [compile it yourself][mac-compile].
+Trong trường hợp đó, hãy chắc chắn đã cài đặt [Xcode][xcode-gcc-substitution] hay thay thế Apple's ["Command Line Tools for XCode"] có thể tải về từ Apple's Mac Developer Center.
 
 ### All-in-One Installers
 
-The solutions listed above mainly handle PHP itself, and do not supply things like Apache, Nginx or a SQL server.
-"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
-you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+Các giải pháp được liệt kê ở trên chủ yếu là xử lý PHP, và không cung cấp những thứ như Apache, Nginx hay SQL server.
+Giải pháp "All-in-one" ở đây là: [MAMP][mamp-downloads] và [XAMPP][xampp] sẽ cài đặt các phần mềm khác cho bạn và kết hợp tất cả chúng lại với nhau, dễ dàng cài đặt đi kèm với sự cân bằng và tính linh hoạt.
 
 [Homebrew]: https://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
