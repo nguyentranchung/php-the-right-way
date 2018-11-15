@@ -6,7 +6,7 @@
 
 * Trang web này là một dự án của Jekyll.
 * Mỗi phần và phần phụ viết bằng Markdown nằm trong thư mục `_posts/`.
-* Phần phụ có thuộc tính `isChild: true` nằm ở đầu file.
+* Phần phụ có thuộc tính `isChild: true` nằm ở đầu file chính.
 * Cấu trúc trang và điều hướng được tạo tự động.
 
 ## Spread the Word!
