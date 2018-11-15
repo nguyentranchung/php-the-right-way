@@ -23,11 +23,11 @@ Bạn có thể đọc `CONTRIBUTING.md` file để biết hướng dẫn và m�
 2. Tùy chọn cài đặt [Ruby](https://rvm.io/rvm/install/) với [Jekyll](https://github.com/mojombo/jekyll/) gem để xem trước local
 3. Gửi pull request cho tôi.
 
-### Một số hướng dẫn dành cho người đóng gópContributor Style Guide
+### Một số hướng dẫn dành cho người đóng góp
 
-2. Sử dụng bốn (4) khoảng trắng canh lề cho chữ; đừng sử dụng tab.
-3. Giới hạn xuống dòng 120 ký tự.
-4. Code mẫu phải tuân thủ PSR-1 hoặc cao hơn.
+1. Sử dụng bốn (4) khoảng trắng canh lề cho chữ; đừng sử dụng tab.
+2. Giới hạn xuống dòng 120 ký tự.
+3. Code mẫu phải tuân thủ PSR-1 hoặc cao hơn.
 
 ## Where
 
