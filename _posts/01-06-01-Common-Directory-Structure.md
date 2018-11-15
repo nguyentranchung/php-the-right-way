@@ -1,18 +1,18 @@
 ---
-title:   Common Directory Structure
+title:   Cấu trúc thư mục chung
 isChild: true
 anchor:  common_directory_structure
 ---
 
-## Common Directory structure {#common_directory_structure_title}
+## Cấu trúc thư mục chung {#common_directory_structure_title}
 
-A common question among those starting out with writing programs for the web is, "where do I put my stuff?" Over the years, this answer has consistently been "where the `DocumentRoot` is." Although this answer is not complete, it's a great place to start.
+Một câu hỏi phổ biến trong số những người bắt đầu với các chương trình viết cho web là "tôi đặt mấy thứ tôi viết ở đâu?" Qua nhiều năm, câu trả lời này luôn được cho là "ở `DocumentRoot`". Mặc dù câu trả lời này chưa trọn vẹn, nhưng đó là một nơi tuyệt vời để bắt đầu
 
-For security reasons, configuration files should not be accessible by a site's visitors; therefore, public scripts are kept in a public directory and private configurations and data are kept outside of that directory.
+Vì lý do bảo mật, các tệp cấu hình không được truy cập bởi khách truy cập của trang web; do đó, các public scripts được lưu giữ trong một thư mục public và các cấu hình riêng tư và dữ liệu cá nhân được giữ bên ngoài thư mục đó (DocumentRoot).
 
-For each team, CMS, or framework one works in, a standard directory structure is used by each of those entities. However, if one is starting a project alone, knowing which filesystem structure to use can be daunting.
+Đối với mỗi team, CMS hoặc trong một framework, cấu trúc thư mục chuẩn được sử dụng bởi các thành viên. Tuy nhiên, nếu ai đó bắt đầu dự án một mình, biết được cấu trúc hệ thống tập tin để sử dụng có thể gây khó khăn.
 
-[Paul M. Jones] has done some fantastic research into common practices of tens of thousands of github projects in the realm of PHP. He has compiled a standard file and directory structure, the [Standard PHP Package Skeleton], based on this research. In this directory structure, `DocumentRoot` should point to `public/`, unit tests should be in the `tests/` directory, and third party libraries, as installed by [composer], belong in the `vendor/` directory. For other files and directories, abiding by the [Standard PHP Package Skeleton] will make the most sense to contributors of a project.
+[Paul M. Jones] đã thực hiện một số nghiên cứu tuyệt vời về các thực hành phổ biến của hàng chục nghìn dự án github trong lĩnh vực PHP. Ông đã biên soạn một cấu trúc thư mục và tệp tiêu chuẩn có tên là [Standard PHP Package Skeleton] dựa trên cơ sở đã nghiên cứu. Trong cấu trúc thư mục này, `DocumentRoot` nên trỏ đến `public/`, unit tests phải ở trong thư mục `tests/`, và các gói thư viện thứ 3, phải cài đặt thông qua [composer], và đặt trong thư mục `vendor/`. Đối với các tệp và thư mục khác, tuân thủ [Standard PHP Package Skeleton] sẽ có ý nghĩa nhất đối với những người đóng góp của một dự án.
 
 [Paul M. Jones]: https://twitter.com/pmjones
 [Standard PHP Package Skeleton]: https://github.com/php-pds/skeleton
