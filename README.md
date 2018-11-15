@@ -31,7 +31,7 @@ Bạn có thể đọc `CONTRIBUTING.md` file để biết hướng dẫn và m�
 
 ## Where
 
-<https://nguyentranchung.github.io/php-the-right-way>
+<http://www.phptherightway.com>
 
 * [English](http://www.phptherightway.com)
 * [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
