@@ -2,64 +2,49 @@
 anchor: code_style_guide
 ---
 
-# Code Style Guide {#code_style_guide_title}
+# Hướng dẫn code đẹp và chuẩn (Code Style) {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+Cộng đồng PHP rất lớn và đa dạng, bao gồm vô số thư viện, frameworks và components. Thông thường các nhà phát triển PHP chọn một vài trong số này và kết hợp chúng thành một dự án duy nhất. Điều quan trọng là mã PHP tuân thủ (càng gần càng tốt) một code style chung để giúp các nhà phát triển dễ dàng trộn và kết hợp các thư viện khác nhau cho các dự án của họ.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
-recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
-personal style.
+[Framework Interop Group][fig] đã đề nghị và phê duyệt một loạt các đề nghị về code style. Không phải toàn bộ chúng đều liên quan đến code style, nhưng những thứ đó là [PSR-1][psr1], [PSR-2][psr2] và [PSR-4][psr4]. Các đề xuất này chỉ đơn thuần là một bộ quy tắc mà nhiều dự án như Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, v.v. sử dụng. Bạn có thể sử dụng chúng cho các dự án của riêng bạn, hoặc tiếp tục sử dụng phong cách cá nhân của riêng bạn.
 
-Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+Tốt nhất, bạn nên viết mã PHP tuân thủ một tiêu chuẩn đã biết. Đây có thể là bất kỳ sự kết hợp nào của PSR hoặc một trong những tiêu chuẩn mã hóa được tạo bởi PEAR hoặc Zend. Điều này có nghĩa là các nhà phát triển khác có thể dễ dàng đọc và làm việc với mã của bạn và các ứng dụng triển khai các thành phần có thể có tính nhất quán ngay cả khi làm việc với nhiều mã của bên thứ ba.
 
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [Tìm hiểu thêm về PSR-1][psr1]
+* [Tìm hiểu thêm về PSR-2][psr2]
+* [Tìm hiểu thêm về PSR-4][psr4]
+* [Tìm hiểu thêm về PEAR Coding Standards][pear-cs]
+* [Tìm hiểu thêm về Symfony Coding Standards][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+Bạn có thể sử dụng [PHP_CodeSniffer][phpcs] để kiểm tra mã theo bất kỳ một trong những đề xuất này và các plugin cho trình soạn thảo văn bản như [Sublime Text][st-cs] để nhận được phản hồi theo thời gian thực.
 
-You can fix the code layout automatically by using one of the following tools:
+Bạn có thể tự động sửa bố cục mã bằng cách sử dụng một trong các công cụ sau:
 
-- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+- [PHP Coding Standards Fixer][phpcsfixer] có một cơ sở mã được kiểm tra rất kỹ.
+- [PHP Code Beautifier and Fixer][phpcbf] công cụ này đã bao gồm PHP_CodeSniffer và có thể được sử dụng để điều chỉnh mã của bạn cho phù hợp.
 
-And you can run phpcs manually from shell:
+Và bạn có thể chạy phpc thủ công từ shell:
 
     phpcs -sw --standard=PSR2 file.php
 
-It will show errors and describe how to fix them.
-It can also be helpful to include this command in a git hook.
-That way, branches which contain violations against the chosen standard cannot enter the repository until those
-violations have been fixed.
+Nó sẽ hiển thị lỗi và mô tả cách sửa chúng. Nó cũng có thể hữu ích khi bao gồm lệnh này trong một git hook. Theo cách đó, các nhánh chứa vi phạm theo tiêu chuẩn đã chọn không thể đưa vào kho lưu trữ cho đến khi các vi phạm đó được khắc phục.
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
-[PHP Code Beautifier and Fixer][phpcbf].
+Nếu bạn có PHP_CodeSniffer, thì bạn có thể tự động sửa các vấn đề về bố cục mã được báo cáo bởi [PHP Code Beautifier and Fixer][phpcbf].
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+Một tùy chọn khác là sử dụng [PHP Coding Standards Fixer][phpcsfixer].
+Nó sẽ chỉ ra loại lỗi nào mà cấu trúc mã có trước khi sửa chúng.
 
     php-cs-fixer fix -v --level=psr2 file.php
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
+Tiếng Anh được ưu tiên cho tất cả các tên biểu tượng (symbol names) và cơ sở hạ tầng mã (code infrastructure). Comments có thể được viết bằng bất kỳ ngôn ngữ nào dễ đọc cho tất cả các bên hiện tại và tương lai, những người có thể sẽ và đang làm việc với codebase đó.
 
-Finally, a good supplementary resource for writing clean PHP code is [Clean Code PHP][cleancode].
+Cuối cùng, một tài nguyên bổ sung tốt để viết mã PHP sạch là [Clean Code PHP][cleancode].
 
 [fig]: https://www.php-fig.org/
-[psr1]: https://www.php-fig.org/psr/psr-1/
-[psr2]: https://www.php-fig.org/psr/psr-2/
+[psr1]: https://chungnguyen.xyz/posts/psr-1-chuan-viet-code-php-co-ban/
+[psr2]: https://chungnguyen.xyz/posts/psr-2-chuan-trinh-bay-code-php-dep/
 [psr4]: https://www.php-fig.org/psr/psr-4/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
@@ -67,4 +52,4 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: https://cs.sensiolabs.org/
-[cleancode]: https://github.com/jupeter/clean-code-php
+[cleancode]: https://github.com/nguyentranchung/clean-code-php

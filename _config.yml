@@ -1,4 +1,4 @@
-baseurl: https://nguyentranchung.github.io/php-the-right-way
+baseurl: /
 github_url: https://github.com/nguyentranchung/php-the-right-way
 highlighter: rouge
 markdown: kramdown
